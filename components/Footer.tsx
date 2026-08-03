@@ -1,7 +1,8 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-[#23402F] text-white py-20 px-6">
-
       <div className="max-w-5xl mx-auto text-center">
 
         <h2 className="font-script text-5xl">
@@ -20,27 +21,36 @@ export default function Footer() {
           and we look forward to creating beautiful memories together.
         </p>
 
-        <p className="mt-10 text-[#E8D9B5] font-medium">
+        <p className="mt-10 text-[#E8D9B5] font-medium tracking-[3px]">
           #SELoveStory
         </p>
 
-        <p className="mt-12 flex justify-end">
-  <a
-    href="tel:07061908787"
-    className="flex items-center gap-2 text-xs text-gray-400 hover:text-[#C8A96A] transition"
-  >
-    <img
-      src="/images/osilight-logo.png"
-      alt="osilight studios"
-      className="w-6 h-6 rounded-full"
-    />
+        <div className="mt-14 flex justify-end">
+          <a
+            href="tel:07061908787"
+            className="flex items-center gap-3 text-xs text-gray-400 hover:text-[#C8A96A] transition"
+          >
+            <Image
+              src="/images/osilight-logo.png"
+              alt="osilight studios"
+              width={28}
+              height={28}
+              className="rounded-full"
+            />
 
-    <span>|</span>
+            <span>Designed by</span>
 
-    <span className="text-[#C8A96A]">•</span>
-  </a>
-</div>
+            <span className="font-semibold text-white">
+              osilight studios
+            </span>
 
+            <span className="text-[#C8A96A]">•</span>
+
+            <span>07061908787</span>
+          </a>
+        </div>
+
+      </div>
     </footer>
   );
 }
