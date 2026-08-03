@@ -13,11 +13,10 @@ export default function Navbar() {
 
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-5">
 
-        <h1 className="text-[#23402F] text-3xl font-serif">
-          U <span className="text-[#C8A96A]">&</span> E
+        <h1 className="text-[#23402F] text-xl md:text-2xl font-semibold tracking-wide">
+          <span className="text-[#C8A96A]">#</span>
+          SELoveStory
         </h1>
-
-        {/* Desktop Menu */}
 
         <ul className="hidden md:flex gap-10 text-[#23402F] font-medium">
 
@@ -47,8 +46,6 @@ export default function Navbar() {
 
         </ul>
 
-        {/* Mobile Menu Button */}
-
         <button
           className="md:hidden text-[#23402F]"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -57,8 +54,6 @@ export default function Navbar() {
         </button>
 
       </div>
-
-      {/* Mobile Menu */}
 
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 bg-white ${
@@ -92,6 +87,7 @@ export default function Navbar() {
           </li>
 
         </ul>
+
       </div>
 
     </nav>
