@@ -24,9 +24,41 @@ const poppins = Poppins({
   variable: "--font-body",
 });
 
+const siteUrl = "https://uchenna-ebere-wedding.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Uchenna & Ebere",
-  description: "Wedding Invitation",
+  metadataBase: new URL(siteUrl),
+
+  title: "Uchenna & Ebere | Wedding Invitation",
+
+  description:
+    "Together with our families, joyfully invite you to celebrate our wedding on Saturday, 5 September 2026.",
+
+  openGraph: {
+    title: "Uchenna & Ebere | Wedding Invitation",
+    description:
+      "Together with our families, joyfully invite you to celebrate our wedding on Saturday, 5 September 2026.",
+    url: siteUrl,
+    siteName: "Uchenna & Ebere",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Uchenna & Ebere Wedding Invitation",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Uchenna & Ebere | Wedding Invitation",
+    description:
+      "Together with our families, joyfully invite you to celebrate our wedding.",
+    images: ["/images/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
