@@ -46,7 +46,7 @@ export default function RSVP() {
             <input
               type="hidden"
               name="_next"
-              value="http://localhost:3000/thank-you"
+              value="https://uchenna-ebere-wedding.vercel.app/thank-you"
             />
 
             <div>
@@ -112,9 +112,6 @@ export default function RSVP() {
               >
                 <option>1</option>
                 <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5+</option>
               </select>
             </div>
 
