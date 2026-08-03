@@ -25,27 +25,22 @@ export default function Footer() {
           #SELoveStory
         </p>
 
-        <div className="mt-14 flex justify-end">
+        <div className="mt-24 flex justify-end">
           <a
             href="tel:07061908787"
-            className="flex items-center gap-3 text-xs text-gray-400 hover:text-[#C8A96A] transition"
+            className="flex items-center gap-2 text-xs text-gray-400 hover:text-[#C8A96A] transition"
           >
+            <span>Designed by</span>
             <Image
               src="/images/osilight-logo.png"
               alt="osilight studios"
-              width={28}
-              height={28}
+              width={22}
+              height={22}
               className="rounded-full"
             />
 
-            <span>Designed by</span>
-
-            <span className="font-semibold text-white">
-              osilight studios
-            </span>
-
-            <span className="text-[#C8A96A]">•</span>
-
+            <span className="text-[#C8A96A]">|</span>
+                 
             <span>07061908787</span>
           </a>
         </div>
