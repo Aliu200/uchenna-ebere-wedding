@@ -35,32 +35,38 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto">
 
         <p className="uppercase tracking-[6px] text-[#C8A96A] text-center">
-          Our Memories
+          Captured Moments
         </p>
 
         <h2 className="font-heading text-5xl text-center text-[#23402F] mt-5">
-          Gallery
+          Our Journey
         </h2>
 
-        <p className="text-center text-gray-500 mt-5 mb-14">
-          Every picture tells our love story.
+        <p className="text-center text-gray-500 mt-5 mb-16 max-w-2xl mx-auto">
+          A glimpse into the beautiful moments that brought us here...
         </p>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-8 space-y-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
 
           {photos.map((photo, i) => (
             <div
               key={i}
               onClick={() => setIndex(i)}
-              className="mb-8 break-inside-avoid cursor-pointer group"
+              className="cursor-pointer overflow-hidden rounded-2xl shadow-lg group"
             >
-              <Image
-                src={photo}
-                alt={`Gallery ${i + 1}`}
-                width={800}
-                height={1200}                
-                className="rounded-3xl shadow-xl w-full h-auto object-cover transition duration-700 group-hover:scale-[1.03]"
-              />
+              <div className="relative aspect-[4/5]">
+
+                <Image
+                  src={photo}
+                  alt={`Gallery ${i + 1}`}
+                  fill
+                  sizes="(max-width:768px) 50vw,
+                         (max-width:1024px) 33vw,
+                         25vw"
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                />
+
+              </div>
             </div>
           ))}
 
