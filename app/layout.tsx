@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Uchenna & Ebere",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Uchenna & Ebere Wedding Invitation",
