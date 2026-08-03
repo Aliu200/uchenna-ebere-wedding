@@ -30,7 +30,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="bg-white py-24 px-6"
+      className="bg-white py-16 md:py-24 px-5 md:px-6"
     >
       <div className="max-w-7xl mx-auto">
 
@@ -46,15 +46,15 @@ export default function Gallery() {
           A glimpse into the beautiful moments that brought us here...
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
 
           {photos.map((photo, i) => (
             <div
               key={i}
               onClick={() => setIndex(i)}
-              className="cursor-pointer overflow-hidden rounded-2xl shadow-lg group"
+              className="cursor-pointer overflow-hidden rounded-xl shadow-md group"
             >
-              <div className="relative aspect-[4/5]">
+              <div className="relative aspect-[4/4.8]">
 
                 <Image
                   src={photo}
