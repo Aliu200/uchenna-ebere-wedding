@@ -46,7 +46,7 @@ export default function RSVP() {
             <input
               type="hidden"
               name="_next"
-              value="https://uchenna-ebere-wedding.vercel.app/thank-you"
+              value="https://Sandra-ebere-wedding.vercel.app/thank-you"
             />
 
             <div>

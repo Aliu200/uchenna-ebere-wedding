@@ -24,28 +24,28 @@ const poppins = Poppins({
   variable: "--font-body",
 });
 
-const siteUrl = "https://uchenna-ebere-wedding.vercel.app";
+const siteUrl = "https://Sandra-ebere-wedding.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
-  title: "Uchenna & Ebere | Wedding Invitation",
+  title: "Sandra & Ebere | Wedding Invitation",
 
   description:
     "Together with our families, joyfully invite you to celebrate our wedding on Saturday, 5 September 2026.",
 
   openGraph: {
-    title: "Uchenna & Ebere | Wedding Invitation",
+    title: "Sandra & Ebere | Wedding Invitation",
     description:
       "Together with our families, joyfully invite you to celebrate our wedding on Saturday, 5 September 2026.",
     url: siteUrl,
-    siteName: "Uchenna & Ebere",
+    siteName: "Sandra & Ebere",
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Uchenna & Ebere Wedding Invitation",
+        alt: "Sandra & Ebere Wedding Invitation",
       },
     ],
     locale: "en_US",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Uchenna & Ebere | Wedding Invitation",
+    title: "Sandra & Ebere | Wedding Invitation",
     description:
       "Together with our families, joyfully invite you to celebrate our wedding.",
     images: ["/images/og-image.png"],
