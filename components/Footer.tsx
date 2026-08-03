@@ -24,11 +24,22 @@ export default function Footer() {
           #SELoveStory
         </p>
 
-        <p className="mt-8 text-sm text-gray-400">
-          Designed with ❤️ for our family and friends
-        </p>
+        <p className="mt-12 flex justify-end">
+  <a
+    href="tel:07061908787"
+    className="flex items-center gap-2 text-xs text-gray-400 hover:text-[#C8A96A] transition"
+  >
+    <img
+      src="/images/osilight-logo.png"
+      alt="osilight studios"
+      className="w-6 h-6 rounded-full"
+    />
 
-      </div>
+    <span>|</span>
+
+    <span className="text-[#C8A96A]">•</span>
+  </a>
+</div>
 
     </footer>
   );
