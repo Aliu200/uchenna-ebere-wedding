@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: "Uchenna & Ebere | Wedding Invitation",
     description:
       "Together with our families, joyfully invite you to celebrate our wedding.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-image.png"],
   },
 };
 
