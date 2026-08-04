@@ -11,6 +11,7 @@ import WeddingDetails from "@/components/WeddingDetails";
 import Gallery from "@/components/Gallery";
 import RSVP from "@/components/RSVP";
 import Footer from "@/components/Footer";
+import MusicPlayer from "@/components/MusicPlayer";
 
 export default function Home() {
   const [isInvitationOpen, setIsInvitationOpen] = useState(false);
@@ -25,6 +26,7 @@ export default function Home() {
 
       {isInvitationOpen && (
         <>
+          <MusicPlayer />
           <Navbar />
           <Hero />
           <Countdown />
