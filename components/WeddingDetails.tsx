@@ -61,11 +61,11 @@ export default function WeddingDetails() {
               <strong>Time:</strong> 10:00 AM
             </p>
 
-            <p className="mt-4 font-semibold text-sm md:text-base">
+            <p className="mt-6 font-semibold">
               Our Lady of Victory Catholic Church
             </p>
 
-            <p className="text-gray-500 text-xs md:text-base leading-6">
+            <p className="text-gray-500">
               Airport Road,
               <br />
               Rumuodomaya,
