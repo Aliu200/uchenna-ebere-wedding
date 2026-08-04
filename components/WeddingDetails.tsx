@@ -41,15 +41,15 @@ export default function WeddingDetails() {
 
         {/* Ceremony & Reception */}
 
-        <div className="grid grid-cols-2 gap-4 md:gap-10 mt-20">
+        <div className="grid md:grid-cols-2 gap-10 mt-20">
 
           {/* Ceremony */}
 
-          <div className="bg-white rounded-[24px] shadow-xl p-4 md:p-10 hover:-translate-y-2 transition duration-300">
+          <div className="bg-white rounded-[32px] shadow-xl p-10 hover:-translate-y-2 transition duration-300">
 
             <div className="text-5xl mb-6">⛪</div>
 
-            <h3 className="text-lg md:text-3xl font-heading text-[#23402F]">
+            <h3 className="text-3xl font-heading text-[#23402F]">
               Ceremony
             </h3>
 
@@ -78,7 +78,7 @@ export default function WeddingDetails() {
               href="https://www.google.com/maps/search/?api=1&query=Our+Lady+of+Victory+Catholic+Church+Rumuodomaya+Port+Harcourt"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-5 text-xs md:text-base bg-[#23402F] text-white px-3 md:px-6 py-2 md:py-3 rounded-full hover:bg-[#1a2f22] transition"
+              className="inline-block mt-8 bg-[#23402F] text-white px-6 py-3 rounded-full hover:bg-[#1a2f22] transition"
             >
               📍 Open Google Maps
             </a>
