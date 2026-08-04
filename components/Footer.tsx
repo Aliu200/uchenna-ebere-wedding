@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#23402F] text-white py-20 px-6">
+    <footer className="bg-[#23402F] text-white pt-20 pb-8 px-6">
       <div className="max-w-5xl mx-auto text-center">
 
         <h2 className="font-script text-5xl">
@@ -25,7 +25,7 @@ export default function Footer() {
           #SELoveStory
         </p>
 
-        <div className="mt-24 flex justify-end">
+        <div className="mt-40 flex justify-end">
           <a
             href="tel:07061908787"
             className="flex items-center gap-2 text-xs text-gray-400 hover:text-[#C8A96A] transition"
