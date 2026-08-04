@@ -8,7 +8,7 @@ export default function Story() {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-        <div className="relative w-full h-[620px] rounded-[32px] overflow-hidden shadow-2xl">
+        <div className="relative w-full h-[380px] sm:h-[500px] md:h-[620px] rounded-[32px] overflow-hidden shadow-2xl">
           <Image
             src="/images/hero2.jpg.png"
             alt="Our Story"
