@@ -1,6 +1,50 @@
 "use client";
 
+import { FormEvent, useState } from "react";
+
 export default function RSVP() {
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    setSubmitting(true);
+
+    const form = e.currentTarget;
+
+    const data = {
+      fullName: (form.elements.namedItem("Full Name") as HTMLInputElement).value,
+      phone: (form.elements.namedItem("Phone Number") as HTMLInputElement).value,
+      email: (form.elements.namedItem("Email Address") as HTMLInputElement).value,
+      attendance: (form.elements.namedItem("Attendance") as HTMLSelectElement).value,
+      guests: (form.elements.namedItem("Guests") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("Message") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyfcVLVrhlquAraa1eU2b2RBDzqi7w-Tbsl0HEMngp1A3vXLzP2Zgn3tgfOLsxzx97XVw/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to submit RSVP.");
+      }
+
+      form.reset();
+
+      window.location.href = "/thank-you";
+    } catch (error) {
+      alert("Unable to submit RSVP. Please try again.");
+      console.error(error);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
     <section
       id="rsvp"
@@ -23,33 +67,10 @@ export default function RSVP() {
           </p>
 
           <form
-            action="https://formsubmit.co/danladialiu200@gmail.com"
-            method="POST"
+            onSubmit={handleSubmit}
             className="space-y-6"
           >
-
-            {/* Disable Captcha */}
-            <input
-              type="hidden"
-              name="_captcha"
-              value="false"
-            />
-
-            {/* Email Subject */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Wedding RSVP"
-            />
-
-            {/* Redirect after submit */}
-            <input
-              type="hidden"
-              name="_next"
-              value="https://uchenna-ebere-wedding.vercel.app/thank-you"
-            />
-
-            <div>
+                        <div>
               <label className="block mb-2 font-medium">
                 Full Name
               </label>
@@ -77,7 +98,10 @@ export default function RSVP() {
 
             <div>
               <label className="block mb-2 font-medium">
-                Email Address <span className="text-gray-500 text-sm">(Optional)</span>
+                Email Address{" "}
+                <span className="text-gray-500 text-sm">
+                  (Optional)
+                </span>
               </label>
 
               <input
@@ -100,8 +124,7 @@ export default function RSVP() {
                 <option>No</option>
               </select>
             </div>
-
-            <div>
+                        <div>
               <label className="block mb-2 font-medium">
                 Number of Guests
               </label>
@@ -117,7 +140,10 @@ export default function RSVP() {
 
             <div>
               <label className="block mb-2 font-medium">
-                Special Message <span className="text-gray-500 text-sm">(Optional)</span>
+                Special Message{" "}
+                <span className="text-gray-500 text-sm">
+                  (Optional)
+                </span>
               </label>
 
               <textarea
@@ -129,16 +155,17 @@ export default function RSVP() {
 
             <button
               type="submit"
-              className="w-full bg-[#C8A96A] hover:bg-[#b8934d] text-white rounded-full py-4 text-lg transition"
+              disabled={submitting}
+              className="w-full bg-[#C8A96A] hover:bg-[#b8934d] disabled:bg-gray-400 text-white rounded-full py-4 text-lg transition"
             >
-              Submit RSVP
+              {submitting ? "Submitting..." : "Submit RSVP"}
             </button>
-
-          </form>
+                      </form>
 
         </div>
 
       </div>
+
     </section>
   );
 }
