@@ -22,21 +22,21 @@ export default function RSVP() {
     };
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbyfcVLVrhlquAraa1eU2b2RBDzqi7w-Tbsl0HEMngp1A3vXLzP2Zgn3tgfOLsxzx97XVw/exec",
-        {
-          method: "POST",
-          body: JSON.stringify(data),
-        }
-      );
+      await fetch(
+  "https://script.google.com/macros/s/AKfycbyfcVLVrhlquAraa1eU2b2RBDzqi7w-Tbsl0HEMngp1A3vXLzP2Zgn3tgfOLsxzx97XVw/exec",
+  {
+    method: "POST",
+    body: JSON.stringify(data),
+    mode: "no-cors",
+  }
+);
 
-      if (!response.ok) {
-        throw new Error("Failed to submit RSVP.");
-      }
+// Apps Script has already processed the request.
+// Reset the form and redirect.
 
-      form.reset();
+form.reset();
 
-      window.location.href = "/thank-you";
+window.location.href = "/thank-you";
     } catch (error) {
       alert("Unable to submit RSVP. Please try again.");
       console.error(error);
